@@ -1,0 +1,13 @@
+array=[int(x) for x in input().split()]
+def missing_positive_integer(arr):
+    large=max(arr)
+    for i in range(1,large+1):
+        if i in arr:
+            continue
+        elif i not in arr:
+            val=i
+            break
+    else:
+        val=large+1
+    return val
+print(missing_positive_integer(array))
